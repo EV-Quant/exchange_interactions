@@ -5,6 +5,7 @@ members = ["exchange_interactions", "exchange_interactions_*"]
 resolver = "3"
 
 [workspace.lints.rust]
+stable_features = "allow"
 unused_features = "allow"
 
 [workspace.lints.clippy]
@@ -18,6 +19,8 @@ tabs_in_doc_comments = "allow"
 # Questionable
 get_first = "allow" # const fn, so actually more performant
 get_last_with_len = "allow"
+if_not_else = "warn"
+integer_division = "warn"
 
 [workspace.lints.cargo]
 non_kebab_case_bins = "allow"
@@ -77,3 +80,6 @@ tokio-tungstenite = "0.30"
 exchange_interactions_adapters = { version = "0.19.2", path = "exchange_interactions_adapters" }
 exchange_interactions_api_generics = { version = "0.21.2", path = "exchange_interactions_api_generics" }
 exchange_interactions_methods = { version = "0.3.0", path = "exchange_interactions_methods", default-features = false }
+
+[workspace.package]
+repository = "https://github.com/EV-Quant/exchange_interactions"
