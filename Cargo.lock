@@ -905,7 +905,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -2532,7 +2532,7 @@ dependencies = [
  "once_cell",
  "socket2",
  "tracing",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -2929,7 +2929,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -2986,7 +2986,7 @@ dependencies = [
  "security-framework",
  "security-framework-sys",
  "webpki-root-certs",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -3528,7 +3528,7 @@ dependencies = [
  "getrandom 0.4.3",
  "once_cell",
  "rustix",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -3924,9 +3924,7 @@ dependencies = [
 
 [[package]]
 name = "trading_data_core"
-version = "0.5.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b4dd63d4864456d94624a12a92031f9754e76ac44890df1e9daedd9a2e33c060"
+version = "0.5.1"
 dependencies = [
  "arrayvec",
  "derive-new",
@@ -3942,9 +3940,7 @@ dependencies = [
 
 [[package]]
 name = "trading_data_dag"
-version = "0.5.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a58926c85852ac806a03bd44c934b62e0ff5d8ffaed6608addc77053df237f2"
+version = "0.5.1"
 dependencies = [
  "trading_data_expr",
  "trading_data_macros",
@@ -3953,18 +3949,14 @@ dependencies = [
 
 [[package]]
 name = "trading_data_expr"
-version = "0.5.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a00233df239d6d760cd2a4a4e8fead3d946f924ebd872a6c8679b90bdbabee13"
+version = "0.5.1"
 dependencies = [
  "libm",
 ]
 
 [[package]]
 name = "trading_data_macros"
-version = "0.5.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b8ffa83fd42a1c87d604eb8c04267434ab2c449dec67d50b808723b598cbba19"
+version = "0.5.1"
 dependencies = [
  "proc-macro-crate",
  "proc-macro2",
@@ -4117,9 +4109,7 @@ dependencies = [
 
 [[package]]
 name = "v_utils"
-version = "2.24.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "763460688cb958bf467ca140122109dd2f9a2ec2b0cafbee26521b14ee34c185"
+version = "2.23.0"
 dependencies = [
  "ahash 0.8.12",
  "bon",
@@ -4158,9 +4148,7 @@ dependencies = [
 
 [[package]]
 name = "v_utils_macros"
-version = "2.16.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a7530357746c9a98f791caa4dacc46e767de5924dcca96584fd10a002c9d7f16"
+version = "2.16.0"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -4339,7 +4327,7 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
 dependencies = [
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -4773,3 +4761,11 @@ dependencies = [
  "cc",
  "pkg-config",
 ]
+
+[[patch.unused]]
+name = "exec_viz"
+version = "0.3.0"
+
+[[patch.unused]]
+name = "trading_data"
+version = "0.5.1"
