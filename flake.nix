@@ -34,12 +34,13 @@
             };
           };
         };
+        oldestSupportedVersion = "nightly-${v_flakes.rs.nightly_version}";
         github = v_flakes.github {
           inherit pkgs pname rs;
           enable = true;
           # `v_utils` writes `const impl Trait`, which only parses on the canonical nightly, so the
           # floor cannot sit below the pin we build against anyway.
-          lastSupportedVersion = "nightly-${v_flakes.rs.nightly_version}";
+          inherit oldestSupportedVersion;
           jobs = {
             default = true;
             # not sure I like the `default`s option on the interface after this now {{{1
@@ -48,7 +49,7 @@
             #,}}}1
           };
         };
-        readme = v_flakes.readme-fw { inherit pkgs pname; defaults = true; lastSupportedVersion = "nightly-1.98"; rootDir = ./.; badges = [ "msrv" "crates_io" "docs_rs" "loc" "ci" ]; };
+        readme = v_flakes.readme-fw { inherit pkgs pname; defaults = true; inherit oldestSupportedVersion; rootDir = ./.; badges = [ "msrv" "crates_io" "docs_rs" "loc" "ci" ]; };
         combined = v_flakes.utils.combine { inherit rust; modules = [ rs github readme ]; };
       in
       {
