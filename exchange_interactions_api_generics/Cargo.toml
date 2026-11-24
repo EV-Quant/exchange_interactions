@@ -21,8 +21,8 @@ ignored = ["derive-new", "thiserror"]
 [features]
 native-tls = ["reqwest/native-tls", "tokio-tungstenite/native-tls"]
 native-tls-vendored = ["reqwest/native-tls-vendored", "tokio-tungstenite/native-tls-vendored"]
-rustls-tls-native-roots = ["reqwest/rustls", "tokio-tungstenite/rustls-tls-native-roots"]
-rustls-tls-webpki-roots = ["reqwest/rustls", "tokio-tungstenite/rustls-tls-webpki-roots"]
+rustls-tls-native-roots = ["reqwest/rustls-no-provider", "tokio-tungstenite/rustls-tls-native-roots"]
+rustls-tls-webpki-roots = ["reqwest/rustls-no-provider", "tokio-tungstenite/rustls-tls-webpki-roots"]
 
 [dependencies]
 ahash = { workspace = true, features = ["serde"] }
