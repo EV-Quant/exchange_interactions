@@ -917,7 +917,7 @@ dependencies = [
 
 [[package]]
 name = "exchange_interactions_api_generics"
-version = "0.21.2"
+version = "0.21.3"
 dependencies = [
  "ahash 0.8.12",
  "arc-swap",
