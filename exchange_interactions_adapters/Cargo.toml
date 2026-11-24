@@ -24,7 +24,7 @@ features = ["binance", "bybit", "mexc"]
 rustdoc-args = ["--cfg", "docsrs"]
 
 [features]
-default = ["native-tls"]
+default = ["rustls-tls-native-roots"]
 
 full = ["binance", "bitflyer", "bybit", "coincheck", "kucoin", "mexc"]
 binance = ["dep:rand"]
